@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center">İstatistikler</h1>
+<br />
+<br />
+<html>
+<head>
+
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="small-box bg-success">
+                <div class="inner" style="text-align: center;background-color:chartreuse">
+                    <br />
+                    <h3><sup style="font-size: 50px">@ViewBag.CategoryCount</sup></h3>
+                    <sup style="font-size: 20px">Toplam Kategori Sayısı</sup>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-red">
+                <div class="inner" style="text-align: center;background-color:#ff0000">
+                    <br />
+                    <h3><sup style="font-size: 50px">@ViewBag.CategorySoftware</sup></h3>
+                    <sup style="font-size: 20px">Yazılım Kategorisi Başlık Sayısı</sup>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-purple">
+                <div class="inner" style="text-align: center;background-color:#0df8dc">
+                    <br />
+                    <h3><sup style="font-size: 50px">@ViewBag.WritersName</sup></h3>
+                    <sup style="font-size: 20px">Yazar adında a harfi geçen yazar sayısı</sup>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-blue">
+                <div class="inner" style="text-align: center;background-color:#de6bff">
+                    <br />
+                    <h3><sup style="font-size: 40px">@ViewBag.MostTitles</sup></h3>
+                    <sup style="font-size: 20px">En fazla başlığa sahip kategori adı</sup>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-orange">
+                <div class="inner" style="text-align: center;background-color:#ff0580">
+                    <br />
+                    <h3><sup style="font-size: 50px">@ViewBag.CategoryStatusCount</sup></h3>
+                    <sup style="font-size: 20px"> Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark</sup>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
