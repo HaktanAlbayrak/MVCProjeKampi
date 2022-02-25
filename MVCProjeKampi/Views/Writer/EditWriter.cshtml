@@ -5,11 +5,11 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-@*<style>
+<style>
     .field-validation-error {
         color: red;
     }
-</style>*@
+</style>
 
 <br />
 <h1>Yazar Düzenleme Sayfası</h1>
@@ -18,7 +18,7 @@
 {
     <div class="form-group">
         @Html.Label("Yazar ID")
-        @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control", @readonly = "readonly" })
         <br />
         @Html.Label("Yazar Adı")
         @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
