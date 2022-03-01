@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -24,12 +25,12 @@ namespace BusinessLayer.Concrete
         }
         public List<Message> GetListInbox()
         {
-            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com");
+            return _messageDal.List(x => x.ReceiverMail == "haktanalb@gmail.com");
         }
 
         public List<Message> GetListSendbox()
         {
-            return _messageDal.List(x => x.SenderMail == "admin@gmail.com");
+            return _messageDal.List(x => x.SenderMail == "haktanalb@gmail.com");
         }
 
         public void MessageAdd(Message message)

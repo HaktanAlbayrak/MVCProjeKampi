@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Content
+
+@{
+    ViewBag.Title = "AddContent";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<style>
+    .field-validation-error {
+        color: red;
+    }
+</style>
+
+<br />
+<h1>İçerik Girişi</h1>
+<br />
+@using (Html.BeginForm("AddContent", "WriterPanelContent", FormMethod.Post))
+{
+    <div class="form-group">
+        <input type="text" name="HeadingID" value="@ViewBag.d" hidden />
+        @*@Html.Label("İçeriğinizi yazınız: ")*@
+        @Html.TextAreaFor(x => x.ContentValue, 10, 30, new { @class = "form-control", @placeholder = "İçeriğinizi yazınız: " })
+        @Html.ValidationMessageFor(x => x.ContentStatus)
+        <br />
+        <button class="btn btn-outline-info">Kaydet</button>
+    </div>
+}

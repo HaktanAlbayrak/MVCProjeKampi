@@ -12,12 +12,12 @@ using System.Web.Security;
 
 namespace MVCProjeKampi.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
-
         Context c = new Context();
         AdminLoginManager adminLoginManager = new AdminLoginManager(new EfAdminDal());
-
+        WriterLoginManager writerLoginManager = new WriterLoginManager(new EfWriterDal());
 
         // GET: Login
 
@@ -54,8 +54,39 @@ namespace MVCProjeKampi.Controllers
             {
                 RedirectToAction("Index");
             }
-            ViewBag.value = "Kullanıcı Adı veya Şifre Yanlış";
+            ViewBag.ErrorMessage = "Kullanıcı Adı veya Şifre Yanlış";
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult WriterLogin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult WriterLogin(Writer p)
+        {
+            var writeruserinfo = writerLoginManager.GetWriter(p.WriterMail, p.WriterPassword);
+            if (writeruserinfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);
+                Session["WriterMail"] = writeruserinfo.WriterMail;
+                return RedirectToAction("WriterProfile", "WriterPanel");
+            }
+            else
+            {
+                RedirectToAction("WriterLogin");
+            }
+            return View();
+
+        }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Headings", "Default");
         }
     }
 }

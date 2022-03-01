@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>AdminLTE 3 | Dashboard 3</title>
+    <title>MVC Proje Kampı</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
@@ -41,7 +41,7 @@ to get the desired effect
             <a href="index3.html" class="brand-link">
                 <img src="~/AdminLTE-3.0.4/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                      style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light">MVC Admin Paneli</span>
             </a>
 
             <!-- Sidebar -->
@@ -52,23 +52,42 @@ to get the desired effect
                         <img src="~/AdminLTE-3.0.4/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block">Admin Paneli</a>
                     </div>
                 </div>
-
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
                         <li class="nav-item has-treeview">
-                            <a href="/AdminCategory/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <a href="/Login/Index/" class="nav-link">
+                                <i class="nav-icon fa fa-user-secret"></i>
                                 <p>
-                                    Kategoriler
+                                    Admin Girişi
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Login/Index/" class="nav-link">
+                                <i class="nav-icon fa fa-user-circle" aria-hidden="true"></i>
+                                <p>
+                                    Yazar Girişi
+                                </p>
+                            </a>
+                        </li>
+                        @if (User.IsInRole("B"))
+                        {
+
+                            <li class="nav-item has-treeview">
+                                <a href="/AdminCategory/Index/" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Kategoriler
+                                    </p>
+                                </a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a href="/Heading/Index" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
