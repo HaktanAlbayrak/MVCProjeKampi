@@ -24,13 +24,13 @@ namespace MVCProjeKampi.Controllers
         public ActionResult Inbox()
         {
             string p = (string)Session["AdminUserName"];
-            var messagelist = mm.GetListInbox();
+            var messagelist = mm.GetListInbox(p);
             return View(messagelist);
         }
         public ActionResult Sendbox()
         {
             string p = (string)Session["AdminUserName"];
-            var messagelist = mm.GetListSendbox();
+            var messagelist = mm.GetListSendbox(p);
             return View(messagelist);
         }
 
@@ -56,9 +56,11 @@ namespace MVCProjeKampi.Controllers
         [ValidateInput(false)]
         public ActionResult NewMessage(Message p)
         {
+            string sender = (string)Session["AdminUserName"];
             ValidationResult result = messagevalidator.Validate(p);
             if (result.IsValid)
             {
+                p.SenderMail = sender;
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 mm.MessageAdd(p);
                 return RedirectToAction("SendBox");
