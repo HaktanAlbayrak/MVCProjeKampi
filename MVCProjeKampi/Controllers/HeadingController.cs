@@ -23,6 +23,12 @@ namespace MVCProjeKampi.Controllers
             return View(headingvalues);
         }
 
+        public ActionResult HeadingReport()
+        {
+            var headingvalues = hm.GetList();
+            return View(headingvalues);
+        }
+
         [HttpGet]
         public ActionResult AddHeading()
         {
@@ -73,7 +79,7 @@ namespace MVCProjeKampi.Controllers
             hm.HeadingUpdate(p);
             return RedirectToAction("Index");
         }
-        
+
         public ActionResult DeleteHeading(int id)
         {
             var HeadingValue = hm.GetByID(id);

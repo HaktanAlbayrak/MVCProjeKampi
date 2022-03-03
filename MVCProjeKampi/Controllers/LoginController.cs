@@ -48,7 +48,7 @@ namespace MVCProjeKampi.Controllers
             {
                 FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName, false);
                 Session["AdminUserName"] = adminuserinfo.AdminUserName;
-                return RedirectToAction("Index", "AdminCategory");
+                return RedirectToAction("Index", "Heading");
             }
             else
             {
@@ -87,6 +87,13 @@ namespace MVCProjeKampi.Controllers
             FormsAuthentication.SignOut();
             Session.Abandon();
             return RedirectToAction("Headings", "Default");
+        }
+
+        public ActionResult AdminLogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Login", "Index");
         }
     }
 }
