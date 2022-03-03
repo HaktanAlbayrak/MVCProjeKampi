@@ -76,7 +76,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <ul class="text-center nav-honey">
                     <li>
-                        <a href="/Home/HomePage/" class="active ">Ana Sayfa</a>
+                        <a href="#home" class="scroll">Ana Sayfa</a>
                     </li>
                     <li>
                         <a class="scroll" href="#about">Geliştirme Araçları</a>
@@ -88,10 +88,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <a class="scroll" href="#projects">Görseller</a>
                     </li>
                     <li>
-                        <a class="scroll" href="#contact">İletişim</a>
+                        <a href="/Default/Headings/1">Sözlük</a>
                     </li>
                     <li>
-                        <a class="scroll" href="#contact">Sözlük</a>
+                        <a class="scroll" href="#contact">İletişim</a>
                     </li>
                     <li class="login">
                         <button type="button" class="btn login-btn text-uppercase " data-toggle="modal" data-target="#exampleModalCenter">
@@ -288,16 +288,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </section>
     <!-- //services -->
-    <!-- /experience -->
-    <section class="experience py-lg-5 py-4" id="experience">
-        <div class="timeline py-lg-5 py-3">
-            <h4 class="sub-tittle-w3 text-uppercase text-center">Experience</h4>
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">Job & Education</h3>
-            <div id="my-timeline"></div>
-        </div>
-
-    </section>
-    <!-- //experience -->
     <!--gallery  -->
     <section class="gallery py-md-5 py-3" id="projects">
         <div class="gallery-inner container py-md-5 pb-3">
@@ -542,7 +532,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="address-right text-center">
                                 <h6 class="my-3">Adres</h6>
                                 <p>
-                                    İstanbul, USA
+                                    İstanbul, Turkey
 
                                 </p>
                             </div>
@@ -675,11 +665,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7163.678401247161!2d29.123253671600768!3d40.98244991146696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cacf5577f613a7%3A0x5b59583e9e6b62d7!2sBrandium%20Avm!5e0!3m2!1str!2str!4v1646295186270!5m2!1str!2str" width="1200" height="450" style="border:0; margin-left:80px" allowfullscreen="" loading="lazy"></iframe>
     </footer>
     <!--//footer-->
     <!--model-forms-->
     <!--/Login-->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">f
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -690,24 +681,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="modal-body">
 
                     <div class="login px-4 mx-auto mw-100">
-                        <h5 class="text-center mb-4">Login Now</h5>
+                        <h5 class="text-center mb-4">Giriş Yap</h5>
                         <form action="#" method="post">
                             <div class="form-group">
-                                <label class="mb-2">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                <label class="mb-2">E-Mail</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail" required="">
+                                <small id="emailHelp" class="form-text text-muted">E-postanız kimse ile paylaşılmayacaktır.</small>
                             </div>
                             <div class="form-group">
-                                <label class="mb-2">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
+                                <label class="mb-2">Şifre</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifre" required="">
                             </div>
                             <div class="form-check mb-2">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             </div>
-                            <button type="submit" class="btn btn-primary submit mb-4">Sign In</button>
+                            <button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
                             <p class="text-center pb-4">
-                                <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> Don't have an account?</a>
+                                <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> Hesabın yok mu?</a>
                             </p>
                         </form>
                     </div>
@@ -728,30 +719,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="modal-body">
                     <div class="login px-4 mx-auto mw-100">
-                        <h5 class="text-center mb-4">Register Now</h5>
+                        <h5 class="text-center mb-4">Kayıt Ol</h5>
                         <form action="#" method="post">
                             <div class="form-group">
-                                <label>First name</label>
+                                <label>İsim</label>
 
-                                <input type="text" class="form-control" id="validationDefault01" placeholder="" required="">
+                                <input type="text" class="form-control" id="validationDefault01" placeholder="İsim" required="">
                             </div>
                             <div class="form-group">
-                                <label>Last name</label>
-                                <input type="text" class="form-control" id="validationDefault02" placeholder="" required="">
+                                <label>Soyisim</label>
+                                <input type="text" class="form-control" id="validationDefault02" placeholder="Soyisim" required="">
                             </div>
 
                             <div class="form-group">
-                                <label class="mb-2">Password</label>
-                                <input type="password" class="form-control" id="password1" placeholder="" required="">
+                                <label class="mb-2">Şifre</label>
+                                <input type="password" class="form-control" id="password1" placeholder="Şifre" required="">
                             </div>
                             <div class="form-group">
-                                <label>Confirm Password</label>
-                                <input type="password" class="form-control" id="password2" placeholder="" required="">
+                                <label>Şifreyi Doğrula</label>
+                                <input type="password" class="form-control" id="password2" placeholder="Şifreyi Doğrula" required="">
                             </div>
 
-                            <button type="submit" class="btn btn-primary submit mb-4">Register</button>
+                            <button type="submit" class="btn btn-primary submit mb-4">Kaydol</button>
                             <p class="text-center pb-4">
-                                <a href="#">By clicking Register, I agree to your terms</a>
+                                <a href="#">Kaydol'a tıklayarak, şartlarınızı kabul ediyorum</a>
                             </p>
                         </form>
 
